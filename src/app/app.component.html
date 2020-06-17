@@ -1,10 +1,25 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
 
-<div *ngIf=" title === 'isaac' ">
-  Este es un div
+<div *ngIf=" title === 'user1' ">
+  Este es User1
 </div>
+<div *ngIf=" title === 'user2' ">
+  Este es un User2
+</div>
+<div *ngIf=" title === 'user3' ">
+  Este es un User3
+</div>
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'user1'">This is User1</p>
+  <p *ngSwitchCase="'user2'">This is User2</p>
+  <p *ngSwitchCase="'user3'">This is User3</p>
+  <p *ngSwitchDefault>This is not a User</p>
+</div>
+
 <br><br>
+
 <div *ngIf="title === developerVorname; then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>Sie haben den Vorname geschrieben</ng-template>
 <ng-template #elseBlock>Sie haben den Vorname nicht geschrieben</ng-template>
