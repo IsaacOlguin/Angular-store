@@ -1,2 +1,10 @@
 <input type="text" [(ngModel)]="title">
 {{ title }}
+
+<div *ngIf=" title === 'isaac' ">
+  Este es un div
+</div>
+<br><br>
+<div *ngIf="title === developerVorname; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Sie haben den Vorname geschrieben</ng-template>
+<ng-template #elseBlock>Sie haben den Vorname nicht geschrieben</ng-template>
