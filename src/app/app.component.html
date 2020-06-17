@@ -8,3 +8,20 @@
 <div *ngIf="title === developerVorname; then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>Sie haben den Vorname geschrieben</ng-template>
 <ng-template #elseBlock>Sie haben den Vorname nicht geschrieben</ng-template>
+
+<br><br>
+<button (click)="addItem()">Add item</button>
+
+<ul>
+  <li *ngFor="let i of items">
+    {{ i }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngIf="obst.length === 0">La lista esta vacia</li>
+  <li *ngFor="let einObst of obst; index as i">
+    {{einObst}} {{ i }}
+    <button (click)="deleteItem(i)">Delete item</button>
+  </li>
+</ul>

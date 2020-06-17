@@ -8,4 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'store';
   developerVorname = 'Isaac';
+
+  items = ["isaac", "olguin"];
+
+  obst = ["Apfel", "Birne", "Kirsche", "Wassermelon", "Banane"];
+
+  addItem() {
+    this.obst.push("ein neues Obst");
+  }
+
+  deleteItem(index: number) {
+    this.obst.splice(index, 1);
+  }
 }
