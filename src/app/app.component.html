@@ -25,3 +25,10 @@
     <button (click)="deleteItem(i)">Delete item</button>
   </li>
 </ul>
+
+<!--Solo se pueden iterar arrays-->
+<div *ngFor="let product of products">
+  {{ product.title }}
+  <img [src]="product.image" alt="">
+  {{ product.price }}
+</div>
