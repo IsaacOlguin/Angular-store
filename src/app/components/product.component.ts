@@ -17,6 +17,9 @@ import { Product } from '../product.model';
 })
 // OnChanges,
 export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
+
+  today = new Date();
+
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
