@@ -15,9 +15,9 @@ import { Product } from '../product.model';
   templateUrl: './product.component.html',
   styleUrls : ['./product.component.scss']
 })
-//OnChanges,
+// OnChanges,
 export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
-  @Input() product: Product
+  @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   constructor() {
@@ -45,5 +45,5 @@ export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
     console.log('Agregar al carrito');
     this.productClicked.emit(this.product.id);
   }
-  //Se puede poner un numero una cadena, un objeto. Depende de lo que se haya puesto en EventEmmiter
+  // Se puede poner un numero una cadena, un objeto. Depende de lo que se haya puesto en EventEmmiter
 }
