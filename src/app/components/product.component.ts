@@ -1,17 +1,48 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { 
+  Component, 
+  Input, 
+  Output, 
+  EventEmitter,
+  OnChanges, 
+  SimpleChanges, 
+  OnInit, 
+  DoCheck, 
+  OnDestroy } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
 })
-export class ProductComponent {
-  @Input() product: Product;
-
+//OnChanges,
+export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
+  @Input() product: Product
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-  addCart(){
-    console.log("Agregar al carrito");
-    this.productClicked.emit(this.product.id);//Se puede poner un numero una cadena, un objeto. Depende de lo que se haya puesto en EventEmmiter
+  constructor() {
+    console.log('ProductComponent.constructor');
   }
+
+  /*ngOnChanges(changes: SimpleChanges) {
+    console.log("ProductComponent.ngOnChanges");
+    console.log(changes);
+  }*/
+
+  ngOnInit(){
+    console.log('ProductComponent.ngOnInit');
+  }
+
+  ngDoCheck() {
+    console.log('DoCheck');
+  }
+
+  ngOnDestroy(){
+    console.log('ngOnDestroy');
+  }
+
+  addCart(){
+    console.log('Agregar al carrito');
+    this.productClicked.emit(this.product.id);
+  }
+  //Se puede poner un numero una cadena, un objeto. Depende de lo que se haya puesto en EventEmmiter
 }
