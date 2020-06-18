@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'store';
   developerVorname = 'Isaac';
 
+  numero = 10;
+
   items = ['isaac', 'olguin'];
 
   obst = ['Apfel', 'Birne', 'Kirsche', 'Wassermelon', 'Banane'];
