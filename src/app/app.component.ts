@@ -45,4 +45,8 @@ export class AppComponent {
   deleteItem(index: number) {
     this.obst.splice(index, 1);
   }
+
+  clickProduct(id: number) {
+    console.log("Product ID " + id)
+  }
 }
