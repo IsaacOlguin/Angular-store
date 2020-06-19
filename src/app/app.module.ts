@@ -17,6 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
 
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     TestComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
