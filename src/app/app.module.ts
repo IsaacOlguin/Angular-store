@@ -12,6 +12,11 @@ import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { TestComponent } from './test/test.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component';
+
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 @NgModule({
   declarations: [
@@ -23,12 +28,16 @@ import { TestComponent } from './test/test.component';
     HomeComponent,
     ProductsComponent,
     ContactComponent,
-    TestComponent
+    TestComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxUsefulSwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
