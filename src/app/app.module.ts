@@ -8,15 +8,12 @@ import { ProductComponent } from './components/product.component';
 import { CartComponent } from './cart/cart.component';
 import { ExponentialPipe } from './exponential.pipe';
 import { HighlightDirective } from './highlight.directive';
-import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { TestComponent } from './test/test.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { BannerComponent } from './banner/banner.component';
 
-import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -28,13 +25,11 @@ import { LayoutComponent } from './layout/layout.component';
     CartComponent,
     ExponentialPipe,
     HighlightDirective,
-    HomeComponent,
     ProductsComponent,
     ContactComponent,
     TestComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent,
     PageNotFoundComponent,
     ProductDetailComponent,
     LayoutComponent
@@ -42,8 +37,7 @@ import { LayoutComponent } from './layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    NgxUsefulSwiperModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

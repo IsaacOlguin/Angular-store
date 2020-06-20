@@ -8,16 +8,12 @@ import { SwiperOptions } from 'swiper';
 })
 export class BannerComponent implements OnInit {
   imagenes: string[] = [
-    '../../assets/images/banner-1.jpg',
-    '../../assets/images/banner-2.jpg',
-    '../../assets/images/banner-3.jpg',
+    '../../../assets/images/banner-1.jpg',
+    '../../../assets/images/banner-2.jpg',
+    '../../../assets/images/banner-3.jpg',
   ];
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  config: SwiperOptions = {
+  configuracion: SwiperOptions = {
     pagination: { el: '.swiper-pagination', clickable: true },
     autoHeight: true,
     allowTouchMove: true,
@@ -45,4 +41,8 @@ export class BannerComponent implements OnInit {
     },
     loop: true
   };
+
+  constructor() {}
+
+  ngOnInit(): void {}
 }
