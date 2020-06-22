@@ -4,7 +4,7 @@
 {{ title }}
 
 <input type="text" [(ngModel)]="numero">
-<!--{{ numero | exponential }}-->
+{{ numero | exponential }}
 
 <div *ngIf=" title === 'user1' ">
   Este es User1
@@ -45,3 +45,4 @@
     <button (click)="deleteItem(i)">Delete item</button>
   </li>
 </ul>
+
