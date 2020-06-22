@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-
+import { SharedModule } from './shared/shared.module';
 
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
@@ -21,8 +21,9 @@ const routes: Routes = [
       },
       {
         path: 'home',
-        //component: HomeComponent,
-        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)//Carga un modulo dinamicamente
+        // component: HomeComponent,
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule), // Carga un modulo dinamicamente
       },
       {
         path: 'products',
@@ -49,9 +50,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    }),
+    SharedModule
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

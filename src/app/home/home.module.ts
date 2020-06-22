@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
+import { SharedModule } from './../shared/shared.module';
+
 @NgModule({
     declarations: [
         BannerComponent,
@@ -15,6 +17,7 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     imports: [
         CommonModule,
         HomeRoutingModule,
+        SharedModule,
         NgxUsefulSwiperModule
     ]
 })
