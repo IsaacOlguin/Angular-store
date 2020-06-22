@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { MaterialModule } from './../material/material.module';
 
 import { SharedModule } from './../shared/shared.module';
 import { ProductRoutingModule } from './product-routing.module';
@@ -17,7 +18,8 @@ import { ProductRoutingModule } from './product-routing.module';
   imports: [
     CommonModule,
     SharedModule,
-    ProductRoutingModule
+    ProductRoutingModule,
+    MaterialModule
   ],
   exports: [
     /*ProductsComponent,
