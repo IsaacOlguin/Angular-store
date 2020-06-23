@@ -1,9 +1,21 @@
-<h3 appHighlight>I'm the Product component</h3>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
+        <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="crop-image">
+        <img [src]="product.image" alt="" />
+    </div>
+    <mat-card-content>
+        <p>{{ product.description }}</p> <!-- | slice:0:5-->
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="addCart()">Agregar al carrito</button>
+        <a mat-raised-button [routerLink]="['/products', product.id]">Ver detalles</a><!-- target="_blank"-->
+    </mat-card-actions>
+</mat-card>
+<!--<strong></strong>
 
-<h3>{{ product.title | uppercase }}</h3>
-<img [src]="product.image" alt="" />
-<strong>{{ product.price | currency }}</strong>
-<p>{{ product.description | slice:0:5 }}</p>
 <p>{{ today | date:'HH:mm:SS' }}</p>
-<button mat-raised-button color="primary" (click)="addCart()">Agregar al carrito</button>
-<a mat-raised-button [routerLink]="['/products', product.id]" target="_blank">Ver detalles</a>
+-->
+
