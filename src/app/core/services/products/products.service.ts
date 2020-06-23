@@ -10,24 +10,45 @@ export class ProductsService {
   products: Product[] = [
     {
       id: '1',
-      image: 'assets/images/camiseta.png',
-      title : 'Camiseta',
+      image: 'assets/images/laptop.jpg',
+      title : 'Laptop',
       price: 80000,
-      description : 'Camiseta 8000'
+      description : 'Laptop'
     },
     {
       id: '2',
-      image: 'assets/images/hoodie.png',
-      title : 'Hoodie',
+      image: 'assets/images/kindle.jpg',
+      title : 'Kindle',
       price: 50000,
-      description : 'Hoodie 50000'
+      description : 'Kindle para lectura'
     },
     {
       id: '3',
-      image: 'assets/images/mug.png',
-      title : 'Mug',
+      image: 'assets/images/mobile.jpg',
+      title : 'Teléfono',
       price: 30000,
-      description : 'Mug 30000'
+      description : 'Teléfono inteligente'
+    },
+    {
+      id: '4',
+      image: 'assets/images/keyboard.jpg',
+      title : 'Keyboard',
+      price: 25000,
+      description : 'Keyboard last generation'
+    },
+    {
+      id: '5',
+      image: 'assets/images/whiteboard.jpg',
+      title : 'Whiteboard',
+      price: 30000,
+      description : 'Whiteboard innovation'
+    },
+    {
+      id: '6',
+      image: 'assets/images/table.jpg',
+      title : 'Table',
+      price: 50000,
+      description : 'Tish mit zwei Stuhle'
     },
   ];
 
