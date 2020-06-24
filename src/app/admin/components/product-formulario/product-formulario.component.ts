@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { ProductsService } from './../../../core/services/products/products.service';
+import { Validador } from './../../../utils/validador';
 
 @Component({
   selector: 'app-product-formulario',
@@ -29,7 +30,7 @@ export class ProductFormularioComponent implements OnInit {
     this.formulario = this.formBuilder.group({
       id: ['', [Validators.required]],
       title: ['', [Validators.required]],
-      price: [0.0, [Validators.required]],
+      price: [0.0, [Validators.required, Validador.isPriceValid]],
       image: '',
       description: ['', [Validators.required]]
     });
@@ -44,5 +45,9 @@ export class ProductFormularioComponent implements OnInit {
         this.router.navigate(['./admin/products']);
       });
     }
+  }
+
+  get priceField() {
+    return this.formulario.get('price');
   }
 }
