@@ -9,6 +9,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatCardModule} from '@angular/material/card';
 
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 
@@ -39,7 +40,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -58,7 +60,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }
