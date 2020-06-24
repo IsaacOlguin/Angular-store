@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 /*import { ProductComponent } from './product/components/product/product.component';*/
-import { CartComponent } from './cart/cart.component';
+/*import { CartComponent } from './cart/cart.component';*/
 /*import { ProductsComponent } from './products/products.component';*/
 /*import { ContactComponent } from './contact/components/contact/contact.component';*/
 /*import { TestComponent } from './test/components/test/test.component';*/
@@ -23,7 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     /*ProductComponent,*/
-    CartComponent,
+    /*CartComponent,*/
     /*ProductsComponent,*/
     /*ContactComponent,*/
     /*TestComponent,*/
