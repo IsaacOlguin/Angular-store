@@ -13,9 +13,10 @@ import { ProductsTableComponent } from './components/products-table/products-tab
 import { ProductsDashboardComponent } from './components/products-dashboard/products-dashboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductFormularioComponent } from './components/product-formulario/product-formulario.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, ProductsTableComponent, ProductsDashboardComponent, ProductsListComponent, ProductFormularioComponent],
+  declarations: [ProductFormComponent, NavComponent, ProductsTableComponent, ProductsDashboardComponent, ProductsListComponent, ProductFormularioComponent, ProductEditComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
