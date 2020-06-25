@@ -9,6 +9,7 @@ import {
   DoCheck, 
   OnDestroy } from '@angular/core';
 import { Product } from './../../../core/models/product.model';
+import { CartService } from './../../../core/services/cart/cart.service';
 
 @Component({
   selector: 'app-product',
@@ -23,7 +24,9 @@ export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-  constructor() {
+  constructor(
+    private cartService: CartService/* Inyeccion de dependencia */
+  ) {
     console.log('ProductComponent.constructor');
   }
 
@@ -46,7 +49,8 @@ export class ProductComponent implements  OnInit, DoCheck, OnDestroy {
 
   addCart(){
     console.log('Agregar al carrito');
-    this.productClicked.emit(this.product.id);
+    //this.productClicked.emit(this.product.id);
+    this.cartService.addCart(this.product);
   }
   // Se puede poner un numero una cadena, un objeto. Depende de lo que se haya puesto en EventEmmiter
 }
