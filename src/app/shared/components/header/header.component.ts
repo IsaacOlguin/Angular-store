@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 
 import { CartService } from './../../../core/services/cart/cart.service';
 
@@ -14,9 +15,11 @@ export class HeaderComponent implements OnInit {
   constructor(
     private cartService: CartService
   ) {
-    this.cartService.cart$.subscribe(productos => {
-      console.log(productos);
-      this.total = productos.length;
+    this.cartService.cart$.pipe(
+      map(products => products.length)
+    ).subscribe(totalProds => {
+      console.log(totalProds);
+      this.total = totalProds;
     });
    }
 
