@@ -1,0 +1,20 @@
+@import '~flexboxgrid/dist/flexboxgrid.min.css';
+
+.crop-image {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    position: relative;
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+    }
+}
+
+.products-table{
+    width: 96%;
+    margin: 2%;
+}
