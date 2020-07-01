@@ -16,7 +16,15 @@ import { ProductFormularioComponent } from './components/product-formulario/prod
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, ProductsTableComponent, ProductsDashboardComponent, ProductsListComponent, ProductFormularioComponent, ProductEditComponent],
+  declarations: [
+    ProductFormComponent,
+    NavComponent,
+    ProductsTableComponent,
+    ProductsDashboardComponent,
+    ProductsListComponent,
+    ProductFormularioComponent,
+    ProductEditComponent
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,

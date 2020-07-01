@@ -6,6 +6,10 @@ import { Router } from '@angular/router';
 import { ProductsService } from './../../../core/services/products/products.service';
 import { Validador } from './../../../utils/validador';
 
+import { AngularFireStorage } from '@angular/fire/storage';
+import { finalize } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-product-formulario',
   templateUrl: './product-formulario.component.html',
@@ -14,11 +18,13 @@ import { Validador } from './../../../utils/validador';
 export class ProductFormularioComponent implements OnInit {
 
   formulario: FormGroup;
+  imagen$: Observable<any>;
 
   constructor(
     private formBuilder: FormBuilder,
     private productsService: ProductsService,
-    private router: Router
+    private router: Router,
+    private angularFireStorage: AngularFireStorage
   ) {
     this.buildForm();
   }
@@ -49,5 +55,22 @@ export class ProductFormularioComponent implements OnInit {
 
   get priceField() {
     return this.formulario.get('price');
+  }
+
+  uploadFile(event){
+    const file = event.target.files[0];
+    console.log(file);
+    const name = 'images1.png';
+    const fileRef = this.angularFireStorage.ref(name);
+    const task = this.angularFireStorage.upload(name, file);
+
+    task.snapshotChanges().pipe(
+      finalize(() => {
+        this.imagen$ = fileRef.getDownloadURL();
+        this.imagen$.subscribe(url => {
+          console.log(url);
+          this.formulario.get('image').setValue(url);
+        });
+      })).subscribe();
   }
 }

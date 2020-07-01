@@ -29,6 +29,14 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs">
+                    <img *ngIf="(imagen$ | async) as imagen" [src]="imagen" alt="">
+                    <input type=file (change)="uploadFile($event)">
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-xs">
                     <mat-form-field>

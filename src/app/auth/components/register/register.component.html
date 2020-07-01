@@ -1,0 +1,28 @@
+<form [formGroup]="formulario" (ngSubmit)="register($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Registro</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input matInput type="email" formControlName="email" placeholder="E-Mail">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input matInput type="password" formControlName="pwd" placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button [disabled]="formulario.invalid" mat-raised-button type="submit" color="primary">Registrar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

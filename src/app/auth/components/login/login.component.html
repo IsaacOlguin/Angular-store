@@ -1,0 +1,30 @@
+<form [formGroup]="formulario" (ngSubmit)="login($event)">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Ingreso a la administración</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input matInput type="email" formControlName="email" placeholder="E-Mail">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input matInput type="password" formControlName="pwd" placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button [disabled]="formulario.invalid" mat-raised-button type="submit" color="primary">Ingresar</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
+<br><br>
+<p class="txt-alerta">{{mensaje}}</p>
